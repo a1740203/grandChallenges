@@ -210,7 +210,7 @@
                 document.getElementById("heatmapContainer1c").style.display = "block";
                 document.getElementById("heatmapContainer1c").style.opacity = "1";
                 document.getElementById("heatmapCombined1").style.display = "block";
-                document.getElementById("heatmapCombined1").style.opacity = "0.5";
+                document.getElementById("heatmapCombined1").style.opacity = "0.63";
                 initialState2corrb();initialState2corra();
                 break;
             case (sliderState2 == 2):
@@ -220,7 +220,7 @@
                 document.getElementById("heatmapContainer2c").style.display = "block";
                 document.getElementById("heatmapContainer2c").style.opacity = "1";
                 document.getElementById("heatmapCombined2").style.display = "block";
-                document.getElementById("heatmapCombined2").style.opacity = "0.5";
+                document.getElementById("heatmapCombined2").style.opacity = "0.63";
                 initialState2corrb();initialState2corra();
                 break;
             case (sliderState2 == 3):
@@ -230,7 +230,7 @@
                 document.getElementById("heatmapContainer3c").style.display = "block";
                 document.getElementById("heatmapContainer3c").style.opacity = "1";
                 document.getElementById("heatmapCombined3").style.display = "block";
-                document.getElementById("heatmapCombined3").style.opacity = "0.5";
+                document.getElementById("heatmapCombined3").style.opacity = "0.63";
                 initialState2corrb();initialState2corra();
                 break;
             case (sliderState2 == 4):
@@ -242,7 +242,7 @@
                 document.getElementById("heatmapContainer4Coverc").style.display = "block";
                 document.getElementById("heatmapContainer4Coverc").style.opacity = "1";
                 document.getElementById("heatmapCombined4").style.display = "block";
-                document.getElementById("heatmapCombined4").style.opacity = "0.5";
+                document.getElementById("heatmapCombined4").style.opacity = "0.63";
                 initialState2corrb();initialState2corra();
                 break;
             case (sliderState2 == 5):
@@ -254,7 +254,7 @@
                 document.getElementById("heatmapContainer4Coverc").style.display = "block";
                 document.getElementById("heatmapContainer4Coverc").style.opacity = "1";
                 document.getElementById("heatmapCombined5").style.display = "block";
-                document.getElementById("heatmapCombined5").style.opacity = "0.5";
+                document.getElementById("heatmapCombined5").style.opacity = "0.63";
                 initialState2corrb();initialState2corra();
                 break;
         }
@@ -383,6 +383,12 @@
         document.getElementById("myRange2").value = 0;
         document.getElementById("myRange2a").value = 0;
         if ((divState == 1) && (check == false)) {
+            document.getElementById("heatmapContainerWrapper2a").style.display = "block";
+            divState = 1;
+            return;
+        }
+        if ((divState == 0) && (check == true)) {
+            alert("Heatmap 2 of player eliminators is now being shown, select a game time.");
             document.getElementById("heatmapContainerWrapper2a").style.display = "block";
             divState = 1;
             return;

@@ -150,8 +150,8 @@
         z-index: 4;
         opacity: 1;
     }
-    #heatmapContainerWrapper2a {
-        opacity: 0.9;
+    #heatmapContainerWrapper2, #heatmapContainerWrapper2a {
+        width: 540px;
     }
     #heatmapContainerWrapper3 {
         background-size: 510px 510px;
@@ -201,28 +201,22 @@
         background-image: url("../images/vicMapPhotos/nmap5.png");
     }
     #heatmapCombinedInit {
-        /*background-image: url("../images/vicMapPhotos/map0n.png");*/
-        background-color: #ff0000;
+        background-image: url("../images/vicMapPhotos/map0n.png");
     }
     #heatmapCombined1 {
-        /*background-image: url("../images/vicMapPhotos/nmap1.png");*/
-        background-color: #00DDFF;
+        background-image: url("../images/vicMapPhotos/kmap1.png");
     }
     #heatmapCombined2 {
-        /*background-image: url("../images/vicMapPhotos/nmap2.png");*/
-        background-color: #10FF00;
+        background-image: url("../images/vicMapPhotos/kmap2.png");
     }
     #heatmapCombined3 {
-        /*background-image: url("../images/vicMapPhotos/nmap3.png");*/
-        background-color: #3700FF;
+        background-image: url("../images/vicMapPhotos/kmap3.png");
     }
     #heatmapCombined4 {
-        /*background-image: url("../images/vicMapPhotos/nmap4n.png");*/
-        background-color: #FFEE00;
+        background-image: url("../images/vicMapPhotos/kmap4.png");
     }
     #heatmapCombined5 {
-        /*background-image: url("../images/vicMapPhotos/nmap5.png");*/
-        background-color: #FA00FF;
+        background-image: url("../images/vicMapPhotos/kmap5.png");
     }
     #heatmapUpload0 {
         background-image: url("../images/vicMapPhotos/nmap5.png");
@@ -288,20 +282,35 @@
     #text0b {
         margin-left: 22vw;
     }
-    #text1, #text1a, #text1b {
+    #text1, #text1a {
         color: #ff4440;
     }
-    #text2, #text2a, #text2b {
+    #text2, #text2a {
         color: #81ff81;
     }
-    #text3, #text3a, #text3b {
+    #text3, #text3a {
         color: #9fcbff;
     }
-    #text4, #text4a, #text4b {
+    #text4, #text4a {
         color: #82ffbc;
     }
-    #text5, #text5a, #text5b {
+    #text5, #text5a {
         color: #5241ff;
+    }
+    #text1b {
+        color: #F704C2;
+    }
+    #text2b {
+        color: #00AEFF;
+    }
+    #text3b {
+        color: #9800ff;
+    }
+    #text4b {
+        color: #00ffc7;
+    }
+    #text5b {
+        color: #AEF9E8;
     }
     #text01, #text02, #text03, #text201, #text202, #text203, #text301, #text311, #text321, #text331, #text302, #text312, #text322, #text332, #text3000, #text3001, #text3002 {
         position: absolute;
@@ -414,24 +423,37 @@
         color: #0080ff;
     }
     /* Colour Spectrum */
-    #colourSpectrum, #colourSpectrumOverlay, #spectrumText {
+    #colourSpectrum, #colourSpectrum2, #colourSpectrum3, #colourSpectrumOverlay, #colourSpectrumOverlay2, #spectrumText {
         position: absolute;
         margin: auto;
         margin-left: 1015px;
         margin-top: 5px;
         z-index: 4;
     }
-    #colourSpectrum {
+    #colourSpectrum, #colourSpectrum3 {
         background-image: linear-gradient(to bottom, #8c0000, #ff0000, #ffff00, #00ff00, #31e5e6, #0000ff, #0000a1);
         height: 530px;
         width: 25px;
     }
-    #colourSpectrumOverlay {
+    #colourSpectrum2 {
+        background-image: linear-gradient(to bottom, #F704C2, #C36DE8, #9800ff, #00AEFF, #00ffc7, #AEF9E8, #ffffff);
+        height: 528px;
+        width: 26px;
+        margin-left: 1005px;
+    }
+    #colourSpectrum3 {
+        margin-left: 1025px;
+    }
+    #colourSpectrumOverlay, #colourSpectrumOverlay2 {
         background-color: #7f7f7f;
         height: 510px;
         width: 20px;
         opacity: 0.5;
         margin-top: 15px;
+    }
+    #colourSpectrumOverlay2 {
+        width: 40px;
+        opacity: 0.6;
     }
     #spectrumText {
         margin-left: 1060px;
@@ -543,12 +565,12 @@
         left: 0;
         height: 25px;
         width: 25px;
-        background-color: #eee;
+        background-color: #69ED44;
     }
     
     /* On mouse-over, add a grey background color */
     .lockBoxCont:hover input ~ .checkmark {
-        background-color: #cccccc;
+        background-color: #9EDB8C;
     }
     
     /* When the checkbox is checked, add a blue background */
