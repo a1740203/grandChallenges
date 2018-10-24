@@ -109,6 +109,10 @@
                     <font id="f7">Low<br></font>
                     <font id="f8">Very Low<br></font>
                 </div>
+                <div id="csvButton2">
+                    <label id="label2" for="csvFileInput">CLICK TO SHOW/HIDE HEATMAP</label>
+                    <input type="button" id="csvFileInput" name="csvFileInput" class="button2" onchange="handleFiles(this.files);">
+                </div>
                 <div id="heatmapContainerWrapper">
                     <div id="heatmapContainer0"></div>
                     <div id="heatmapContainer1"></div>
@@ -124,6 +128,7 @@
                     <p id="sliderText">Choose a game time on Slider (mins): </p>
                     <p id="sliderNumbers">0&nbsp&nbsp&nbsp&nbsp&nbsp 4&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 8&nbsp&nbsp&nbsp&nbsp&nbsp 12&nbsp&nbsp&nbsp&nbsp 14&nbsp&nbsp&nbsp&nbsp 16&nbsp&nbsp&nbsp&nbsp</p>
                 </div>
+                <!--
                 <div id="heatmapContainerWrapper2">
                     <div id="heatmapContainer0"></div>
                     <div id="heatmapContainer1"></div>
@@ -132,7 +137,7 @@
                     <div id="heatmapContainer4"></div>
                     <div id="heatmapContainer5"></div>
                     <div id="heatmapContainer4Cover"></div>
-                </div>
+                </div>-->
                 <div class="caption">
                     <span id="visTwoHeader" class="border">SECOND VISUALISATION</span>
                 </div>
@@ -165,9 +170,9 @@
                     <font id="f7">Low<br></font>
                     <font id="f8">Very Low<br></font>
                 </div>
-                <div id="csvButton">
-                    <label for="csvFileInput">CHOOSE A CSV FILE TO TEST</label>
-                    <input type="file" id="csvFileInput" name="csvFileInput" class="button" onchange="handleFiles(this.files);" accept=".csv">
+                <div id="csvButton3">
+                    <label id="label3" for="csvFileInput">CHOOSE A CSV FILE TO TEST</label>
+                    <input type="file" id="csvFileInput" name="csvFileInput" class="button3" onchange="handleFiles(this.files);" accept=".csv">
                 </div>
                 <div id="heatmapContainerWrapper3">
                     <!--<div id="heatmapContainerTest"></div> Test Create Heatmap-->

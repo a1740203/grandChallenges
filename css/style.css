@@ -277,7 +277,7 @@
         font-size: 50px;  
     }
     #text201, #text202, #text203 {
-        color: #ff0000; 
+        color: #ff0000;
     }
     #text3000, #text3001, #text3002 {
         color: #0080ff;  
@@ -309,6 +309,16 @@
         font-size: 90px;
         color: #0080ff;  
     }
+    #text201 {
+        margin-left: 80px;
+    }
+    #text202 {
+        margin-left: 100px;
+    }
+    #text203 {
+        margin-left: 30px;
+        font-size: 60px;
+    }
     #map, #matchID, #timeEnd, #winner {
        margin-top: 0px; 
     }
@@ -326,7 +336,12 @@
         margin-top: -10vh;
         opacity: 0;
     }
-    #csvButton {
+    #csvButton2 {
+        position: absolute;
+        margin-left: 2vw;
+        margin-top: 70vh;
+    }
+    #csvButton3 {
         position: absolute;
         margin-left: 4vw;
         margin-top: 70vh;
@@ -458,7 +473,7 @@
         z-index: 5;
     }
     /* Button Hover */
-    .button, label {
+    .button2, .button3, #label2, #label3 {
         opacity: 0.7;
         border: none;
         color: white;
@@ -476,11 +491,18 @@
         color: black; 
         border: 2px solid #008CBA;
     }
-    .button:hover, label:hover {
+    .button2, #label2 {
+        background-color: #FF667C; 
+        border: 2px solid #B70000;
+    }
+    .button2:hover, #label2:hover {
+        background-color: #B70000; 
+        color: white;
+    }
+    .button3:hover, #label3:hover {
         background-color: #008CBA;
         color: white;
     }
-    
     /* Slider Button */
     .slider1::-webkit-slider-thumb, .slider2::-webkit-slider-thumb, .slider3::-webkit-slider-thumb {
         -webkit-appearance: none;
