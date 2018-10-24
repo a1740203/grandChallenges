@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <!-- Head -->
+    <head>
+        <title> PUBG VISUALISATION </title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="javascript" type="text/javascript" href="js/scripts.js">
+        <meta name="keywords" content="dynamic, visualisation, PUBG, player, unknown, battlegrounds">
+        <meta name="author" content="a1740203">
+    </head>
+    <!-- Scripts -->
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/premap.js"></script>
+    <script type="text/javascript" src="js/heatmap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- Animated Scroll Tags -->
+    <!-- Body -->
+    <body onload="initialState1();scrollFunction();">
+    <!-- Header Container-->
+    <div id="home"></div>
+    <div id="h_Container">
+        <!-- Header-->
+        <div id="header">
+            <p id="h_Title">PUBG DYNAMIC VISUALISATION</p>
+        </div>
+        <div class="signed">
+            <span class="border">a1740203</span>
+        </div> 
+        <div id="h_Box"></div>
+        <div id="overlayHeader"></div>
+    </div>
+    <!-- /Header Container-->
+    <!-- Body Container-->
+    <div id="b_Container">
+        <!-- Paralax Div 1 -->
+        <div class="bgimg-1">
+            <div class="caption">
+                <span class="border">WELCOME TO THE PUBG DYNAMIC VISUALISATION</span>
+            </div>
+        <section id="scrollTagTop" class="scrollingTagAnimation">
+            <a href="#visOne"><span></span>Scroll Down</a>
+        </section>
+        </div>
+        <!-- Paralax Div 2 -->
+        <div id="visOne"></div>
+        <div class="bgimg-2">
+            <div id="overlayButton"></div>
+            <div id="visualisationContainer1">
+                <div id="colourSpectrum"></div>
+                <div id="colourSpectrumOverlay"></div>
+                <div id="f01"><u>Frequency of Eliminations</u>:<br></div>
+                <div id="spectrumText">
+                    <font id="f2">Very High<br></font>
+                    <font id="f3">High<br></font>
+                    <font id="f4">Mid High<br></font>
+                    <font id="f5">Medium<br></font>
+                    <font id="f6">Mid Low<br></font>
+                    <font id="f7">Low<br></font>
+                    <font id="f8">Very Low<br></font>
+                </div>
+                <div id="heatmapContainerWrapper">
+                    <div id="heatmapContainerInit"></div>
+                    <div id="heatmapContainer1"></div>
+                    <div id="heatmapContainer2"></div>
+                    <div id="heatmapContainer3"></div>
+                    <div id="heatmapContainer4"></div>
+                    <div id="heatmapContainer5"></div>
+                    <div id="heatmapContainer4Cover"></div>
+                </div>
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="5" value="0" class="slider1" id="myRange1" oninput="sliderStore();">
+                    <script type="text/javascript" src="premap.js"></script>
+                    <p id="sliderText">Choose a game time on Slider (mins): </p>
+                    <p id="sliderNumbers">0&nbsp&nbsp&nbsp&nbsp&nbsp 4&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 8&nbsp&nbsp&nbsp&nbsp&nbsp 12&nbsp&nbsp&nbsp&nbsp 14&nbsp&nbsp&nbsp&nbsp 16&nbsp&nbsp&nbsp&nbsp</p>
+                </div>
+                <div class="caption">
+                    <span id="visOneHeader" class="border">FIRST VISUALISATION</span>
+                </div>
+                <div id="textHeader1">Avg no. Deaths</div>
+                <div id="textHeader2">at Time Limit</div>
+                <div id="text01">SELECT</div>
+                <div id="text02">A</div>
+                <div id="text03">TIME</div>
+                <div id="text1">60</div>
+                <div id="text2">17</div>
+                <div id="text3">7</div>
+                <div id="text4">15</div>
+                <div id="text5">1</div>
+            </div>
+            <section id="scrollTagUp" class="scrollingTagAnimation">
+                <a href="#home"><span></span></a>
+            </section>
+            <section id="scrollTagDown" class="scrollingTagAnimation">
+                <a href="#visTwo"><span></span></a>
+            </section>
+        </div>
+        <!-- Paralax Div 3 -->
+        <div id="visTwo"></div>
+        <div class="bgimg-3"><br><br>
+            <div id="visualisationContainer2">
+                <div id="colourSpectrum"></div>
+                <div id="colourSpectrumOverlay"></div>
+                <div id="f02"><u>Frequency of Eliminations</u>:<br></div>
+                <div id="spectrumText">
+                    <font id="f2">Very High<br></font>
+                    <font id="f3">High<br></font>
+                    <font id="f4">Mid High<br></font>
+                    <font id="f5">Medium<br></font>
+                    <font id="f6">Mid Low<br></font>
+                    <font id="f7">Low<br></font>
+                    <font id="f8">Very Low<br></font>
+                </div>
+                <div id="heatmapContainerWrapper">
+                    <div id="heatmapContainer0"></div>
+                    <div id="heatmapContainer1"></div>
+                    <div id="heatmapContainer2"></div>
+                    <div id="heatmapContainer3"></div>
+                    <div id="heatmapContainer4"></div>
+                    <div id="heatmapContainer5"></div>
+                    <div id="heatmapContainer4Cover"></div>
+                </div>
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="5" value="0" class="slider2" id="myRange2" oninput="sliderStore();">
+                    <script type="text/javascript" src="premap.js"></script>
+                    <p id="sliderText">Choose a game time on Slider (mins): </p>
+                    <p id="sliderNumbers">0&nbsp&nbsp&nbsp&nbsp&nbsp 4&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 8&nbsp&nbsp&nbsp&nbsp&nbsp 12&nbsp&nbsp&nbsp&nbsp 14&nbsp&nbsp&nbsp&nbsp 16&nbsp&nbsp&nbsp&nbsp</p>
+                </div>
+                <div id="heatmapContainerWrapper2">
+                    <div id="heatmapContainer0"></div>
+                    <div id="heatmapContainer1"></div>
+                    <div id="heatmapContainer2"></div>
+                    <div id="heatmapContainer3"></div>
+                    <div id="heatmapContainer4"></div>
+                    <div id="heatmapContainer5"></div>
+                    <div id="heatmapContainer4Cover"></div>
+                </div>
+                <div class="caption">
+                    <span id="visTwoHeader" class="border">SECOND VISUALISATION</span>
+                </div>
+                <div id="textHeader1">Avg no. Deaths</div>
+                <div id="textHeader2">at Time Limit</div>
+                <div id="text201">SHOW OR</div>
+                <div id="text202">HIDE</div>
+                <div id="text203">COMBINED</div>
+            </div>
+            <section id="scrollTagUp" class="scrollingTagAnimation">
+                <a href="#visOne"><span></span></a>
+            </section>
+            <section id="scrollTagDown" class="scrollingTagAnimation">
+                <a href="#visThree"><span></span></a>
+            </section>
+        </div>
+        <!-- Paralax Div 4 -->
+        <div id="visThree"></div>
+        <div class="bgimg-4">
+            <div id="visualisationContainer3">
+                <div id="colourSpectrum"></div>
+                <div id="colourSpectrumOverlay"></div>
+                <div id="f03"><u>Frequency of Eliminations</u>:<br></div>
+                <div id="spectrumText">
+                    <font id="f2">Very High<br></font>
+                    <font id="f3">High<br></font>
+                    <font id="f4">Mid High<br></font>
+                    <font id="f5">Medium<br></font>
+                    <font id="f6">Mid Low<br></font>
+                    <font id="f7">Low<br></font>
+                    <font id="f8">Very Low<br></font>
+                </div>
+                <div id="csvButton">
+                    <label for="csvFileInput">CHOOSE A CSV FILE TO TEST</label>
+                    <input type="file" id="csvFileInput" name="csvFileInput" class="button" onchange="handleFiles(this.files);" accept=".csv">
+                </div>
+                <div id="heatmapContainerWrapper3">
+                    <!--<div id="heatmapContainerTest"></div> Test Create Heatmap-->
+                    <div id="heatmapUpload0"></div>
+                    <div id="heatmapUpload1"></div>
+                    <div id="heatmapUpload2"></div>
+                    <div id="heatmapUpload3"></div>
+                    <div id="heatmapUpload4"></div>
+                </div>
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="3" value="0" class="slider3" id="myRange3" oninput="sliderStore();">
+                    <script type="text/javascript" src="premap.js"></script>
+                    <p id="sliderText">Choose a game tag: </p>
+                    <p id="sliderTags">&nbspMap&nbsp&nbsp&nbsp&nbsp&nbsp MatchID&nbsp TimeEnd&nbsp&nbsp&nbsp Winner</p>
+                </div>
+                <div class="caption">
+                    <span id="visThreeHeader" class="border">THIRD VISUALISATION</span>
+                </div>
+                <div id="textHeader1">Game-Statistics</div>
+                <div id="textHeader2">Match &nbsp&nbspTags</div>
+                <div id="text3000">SELECT:</div>
+                <div id="text3001">A</div>
+                <div id="text3002">GAME TAG</div>
+                <div id="text301">Map:</div>
+                <div id="text302"><p id="map"></div>
+                <div id="text311">matchID:</div>
+                <div id="text312"><p id="matchID"></p></div>
+                <div id="text321">Time End:</div>
+                <div id="text322"><p id="timeEnd"></p></div>
+                <div id="text331">Winner No:</div>
+                <div id="text332"><p id="winner"></p></div>
+            </div>
+            <section id="scrollTagUp" class="scrollingTagAnimation">
+                <a href="#visTwo"><span></span></a>
+            </section>
+            <section id="scrollTagDown" class="scrollingTagAnimation">
+                <a href="#visEnd"><span></span></a>
+            </section>
+        </div>
+        <!-- Paralax Div 5 -->
+        <div id="visEnd"></div>
+        <div class="bgimg-5">
+            <div class="caption">
+                <a href="#home"><span class="border">BACK TO THE TOP</span></a>
+            </div>
+            <section id="scrollTagEnd" class="scrollingTagAnimation">
+                <a href="#visThree"><span></span></a>
+            </section>
+        </div>
+        <!-- Footer -->
+        <div id="footer">
+        </div>
+    </div> <!-- /Body Container-->
