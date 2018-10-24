@@ -14,7 +14,7 @@
     <script type="text/javascript" src="js/heatmap.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- Animated Scroll Tags -->
     <!-- Body -->
-    <body onload="initialState1();scrollFunction();">
+    <body onload="initialize();scrollFunction();">
     <!-- Header Container-->
     <div id="home"></div>
     <div id="h_Container">
@@ -68,7 +68,6 @@
                 </div>
                 <div class="slidecontainer">
                     <input type="range" min="0" max="5" value="0" class="slider1" id="myRange1" oninput="sliderStore();">
-                    <script type="text/javascript" src="premap.js"></script>
                     <p id="sliderText">Choose a game time on Slider (mins): </p>
                     <p id="sliderNumbers">0&nbsp&nbsp&nbsp&nbsp&nbsp 4&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 8&nbsp&nbsp&nbsp&nbsp&nbsp 12&nbsp&nbsp&nbsp&nbsp 14&nbsp&nbsp&nbsp&nbsp 16&nbsp&nbsp&nbsp&nbsp</p>
                 </div>
@@ -110,34 +109,31 @@
                     <font id="f8">Very Low<br></font>
                 </div>
                 <div id="csvButton2">
-                    <label id="label2" for="csvFileInput">CLICK TO SHOW/HIDE HEATMAP</label>
-                    <input type="button" id="csvFileInput" name="csvFileInput" class="button2" onchange="handleFiles(this.files);">
+                    <label id="label2" for="csvFileInput2">CLICK TO SHOW/HIDE HEATMAP 2</label>
+                    <input type="button" id="csvFileInput2" name="csvFileInput2" class="button2" onclick="hideShow();">
                 </div>
                 <div id="heatmapContainerWrapper">
-                    <div id="heatmapContainer0"></div>
-                    <div id="heatmapContainer1"></div>
-                    <div id="heatmapContainer2"></div>
-                    <div id="heatmapContainer3"></div>
-                    <div id="heatmapContainer4"></div>
-                    <div id="heatmapContainer5"></div>
-                    <div id="heatmapContainer4Cover"></div>
+                    <div id="heatmapContainerInitc"></div>
+                    <div id="heatmapContainer1c"></div>
+                    <div id="heatmapContainer2c"></div>
+                    <div id="heatmapContainer3c"></div>
+                    <div id="heatmapContainer4c"></div>
+                    <div id="heatmapContainer5c"></div>
+                    <div id="heatmapContainer4Coverc"></div>
                 </div>
                 <div class="slidecontainer">
                     <input type="range" min="0" max="5" value="0" class="slider2" id="myRange2" oninput="sliderStore();">
-                    <script type="text/javascript" src="premap.js"></script>
                     <p id="sliderText">Choose a game time on Slider (mins): </p>
                     <p id="sliderNumbers">0&nbsp&nbsp&nbsp&nbsp&nbsp 4&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 8&nbsp&nbsp&nbsp&nbsp&nbsp 12&nbsp&nbsp&nbsp&nbsp 14&nbsp&nbsp&nbsp&nbsp 16&nbsp&nbsp&nbsp&nbsp</p>
                 </div>
-                <!--
                 <div id="heatmapContainerWrapper2">
-                    <div id="heatmapContainer0"></div>
-                    <div id="heatmapContainer1"></div>
-                    <div id="heatmapContainer2"></div>
-                    <div id="heatmapContainer3"></div>
-                    <div id="heatmapContainer4"></div>
-                    <div id="heatmapContainer5"></div>
-                    <div id="heatmapContainer4Cover"></div>
-                </div>-->
+                    <div id="heatmapCombinedInit"></div>
+                    <div id="heatmapCombined1"></div>
+                    <div id="heatmapCombined2"></div>
+                    <div id="heatmapCombined3"></div>
+                    <div id="heatmapCombined4"></div>
+                    <div id="heatmapCombined5"></div>
+                </div>
                 <div class="caption">
                     <span id="visTwoHeader" class="border">SECOND VISUALISATION</span>
                 </div>
@@ -171,8 +167,8 @@
                     <font id="f8">Very Low<br></font>
                 </div>
                 <div id="csvButton3">
-                    <label id="label3" for="csvFileInput">CHOOSE A CSV FILE TO TEST</label>
-                    <input type="file" id="csvFileInput" name="csvFileInput" class="button3" onchange="handleFiles(this.files);" accept=".csv">
+                    <label id="label3">CHOOSE A CSV FILE TO TEST</label>
+                    <input type="file" id="csvFileInput3" class="button3" onchange="handleFiles(this.files);" accept=".csv">
                 </div>
                 <div id="heatmapContainerWrapper3">
                     <!--<div id="heatmapContainerTest"></div> Test Create Heatmap-->
@@ -184,7 +180,6 @@
                 </div>
                 <div class="slidecontainer">
                     <input type="range" min="0" max="3" value="0" class="slider3" id="myRange3" oninput="sliderStore();">
-                    <script type="text/javascript" src="premap.js"></script>
                     <p id="sliderText">Choose a game tag: </p>
                     <p id="sliderTags">&nbspMap&nbsp&nbsp&nbsp&nbsp&nbsp MatchID&nbsp TimeEnd&nbsp&nbsp&nbsp Winner</p>
                 </div>

@@ -150,9 +150,7 @@
         z-index: 4;
     }
     #heatmapContainerWrapper2 {
-        margin-left: 395px;
-        margin-top: 105px;
-        border: 10px solid #ff8000;
+        opacity: 0.9;
     }
     #heatmapContainerWrapper3 {
         background-size: 510px 510px;
@@ -163,7 +161,10 @@
         width:100%;
         height:100%; 
     }
-    #heatmapContainer0, #heatmapContainerInit, #heatmapContainer1, #heatmapContainer2, #heatmapContainer3, #heatmapContainer4, #heatmapContainer4Cover, #heatmapContainer5 {
+    #heatmapContainerInit, #heatmapContainer1, #heatmapContainer2, #heatmapContainer3, #heatmapContainer4, #heatmapContainer4Cover, #heatmapContainer5,
+    #heatmapContainerInitc, #heatmapContainer1c, #heatmapContainer2c, #heatmapContainer3c, #heatmapContainer4c, #heatmapContainer4Coverc, #heatmapContainer5c,
+    #heatmapCombinedInit, #heatmapCombined1, #heatmapCombined2, #heatmapCombined3, #heatmapCombined4, #heatmapCombined5,
+    #heatmapUpload0, #heatmapUpload1, #heatmapUpload2, #heatmapUpload3, #heatmapUpload4 {
         position: inherit;
         width: 100%;
         height: 100%;
@@ -171,22 +172,22 @@
         background-size: 510px 510px;
         z-index: 2;
     }
-    #heatmapContainer0, #heatmapContainerInit {
+    #heatmapContainerInit, #heatmapContainerInitc {
         background-image: url("../images/vicMapPhotos/map0n.png");
     }
-    #heatmapContainer1 {
+    #heatmapContainer1, #heatmapContainer1c {
         background-image: url("../images/vicMapPhotos/nmap1.png");
     }
-    #heatmapContainer2 {
+    #heatmapContainer2, #heatmapContainer2c {
         background-image: url("../images/vicMapPhotos/nmap2.png");
     }
-    #heatmapContainer3 {
+    #heatmapContainer3, #heatmapContainer3c {
         background-image: url("../images/vicMapPhotos/nmap3.png");
     }
-    #heatmapContainer4 {
+    #heatmapContainer4, #heatmapContainer4c {
         background-image: url("../images/vicMapPhotos/nmap4n.png");
     }
-    #heatmapContainer4Cover {
+    #heatmapContainer4Cover, #heatmapContainer4Coverc {
         position: absolute;
         background-image: url("../images/vicMapPhotos/nmap4Cover.png");
         width: 100%;
@@ -195,16 +196,32 @@
         background-size: 510px 117px;
         z-index: 3;
     }
-    #heatmapContainer5 {
+    #heatmapContainer5, #heatmapContainer5c {
         background-image: url("../images/vicMapPhotos/nmap5.png");
     }
-    #heatmapUpload0, #heatmapUpload1, #heatmapUpload2, #heatmapUpload3, #heatmapUpload4 {
-        position: inherit;
-        width: 100%;
-        height: 100%;
-        background-repeat: no-repeat;
-        background-size: 510px 510px;
-        z-index: 2;
+    #heatmapCombinedInit {
+        /*background-image: url("../images/vicMapPhotos/map0n.png");*/
+        background-color: #ff0000;
+    }
+    #heatmapCombined1 {
+        /*background-image: url("../images/vicMapPhotos/nmap1.png");*/
+        background-color: #00DDFF;
+    }
+    #heatmapCombined2 {
+        /*background-image: url("../images/vicMapPhotos/nmap2.png");*/
+        background-color: #10FF00;
+    }
+    #heatmapCombined3 {
+        /*background-image: url("../images/vicMapPhotos/nmap3.png");*/
+        background-color: #3700FF;
+    }
+    #heatmapCombined4 {
+        /*background-image: url("../images/vicMapPhotos/nmap4n.png");*/
+        background-color: #FFEE00;
+    }
+    #heatmapCombined5 {
+        /*background-image: url("../images/vicMapPhotos/nmap5.png");*/
+        background-color: #FA00FF;
     }
     #heatmapUpload0 {
         background-image: url("../images/vicMapPhotos/nmap5.png");
@@ -221,7 +238,7 @@
     #heatmapUpload4 {
         background-image: url("../images/vicMapPhotos/nmap1.png");
     }
-    #textHeader1, #textHeader2, #text0, #text1, #text2, #text3, #text4, #text5, #csvFileInput, #visOneHeader {
+    #textHeader1, #textHeader2, #text0, #text1, #text2, #text3, #text4, #text5, #csvFileInput2, #csvFileInput3, #visOneHeader {
         z-index: 3;
     }
     /* Avg Texts */
@@ -330,20 +347,31 @@
         margin-left: 170px;
     }
     /* Input file */
-    #csvFileInput {
+    #csvFileInput2, #csvFileInput3 {
         position: absolute;
         margin-left: 0vw;
         margin-top: -10vh;
         opacity: 0;
     }
+    #csvFileInput2, #csvFileInput3 {
+        position: absolute;
+        margin-left: 1vw;
+        margin-top: -8vh;
+        opacity: 0;
+        width: 440px;
+        height: 0px;
+    }
+    #csvFileInput3 {
+        width: 340px;
+    }
     #csvButton2 {
         position: absolute;
-        margin-left: 2vw;
+        margin-left: 1.2vw;
         margin-top: 70vh;
     }
     #csvButton3 {
         position: absolute;
-        margin-left: 4vw;
+        margin-left: 3.3vw;
         margin-top: 70vh;
     }
     /* Header Visualisation One */
@@ -431,7 +459,7 @@
         position: absolute;
         margin-left: 525px;
         margin-top: 51px;
-        z-index: 4;
+        z-index: 5;
         text-transform: uppercase;
         font-size: 20px;
         letter-spacing: 6px;
@@ -470,7 +498,7 @@
         opacity: 0.6;
         -webkit-transition: 0.2s;
         transition: opacity 0.2s;
-        z-index: 5;
+        z-index: 6;
     }
     /* Button Hover */
     .button2, .button3, #label2, #label3 {
