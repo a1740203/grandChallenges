@@ -1,13 +1,16 @@
 /* Scripts  */
-    var fileName = "0", map = "0", matchID = 0, time = -1200, winner = "0", initTmp = 0, divState = 0;; // Global Variables
+    var fileName = "0", map = "0", matchID = 0, time = -1200, winner = "0", initTmp = 0, divState = 0; // Global Variables
     
     function initialize() {
         initialState1();
         initialState2();
+        initialState2a();
         initialState3();
         initialState3h();
         sliderStore("0"); // Temp value on initiate
-        document.getElementById("heatmapContainerWrapper2").style.display = "none"; // Combined div initiate
+        document.getElementById("heatmapContainerWrapper2a").style.display = "none"; // Combined div initiate
+        document.getElementById("myRange2a").style.display = "none"; // Combined range initiate
+        document.getElementById("sliderNumbers2").style.display = "none"; // Combined slider initiate
     }
     function initialState1() {
         document.getElementById("heatmapContainerInit").style.display = "none";
@@ -34,12 +37,71 @@
         document.getElementById("heatmapContainer4c").style.display = "none";
         document.getElementById("heatmapContainer4Coverc").style.display = "none";
         document.getElementById("heatmapContainer5c").style.display = "none";
+        document.getElementById("text201").style.display = "none";
+        document.getElementById("text202").style.display = "none";
+        document.getElementById("text203").style.display = "none";
+        document.getElementById("text0a").style.display = "none";
+        document.getElementById("text1a").style.display = "none";
+        document.getElementById("text2a").style.display = "none";
+        document.getElementById("text3a").style.display = "none";
+        document.getElementById("text4a").style.display = "none";
+        document.getElementById("text5a").style.display = "none";
+        document.getElementById("text0b").style.display = "none";
+        document.getElementById("text1b").style.display = "none";
+        document.getElementById("text2b").style.display = "none";
+        document.getElementById("text3b").style.display = "none";
+        document.getElementById("text4b").style.display = "none";
+        document.getElementById("text5b").style.display = "none";
+    }
+    function initialState2corra() {
+        if (divState == 0) {
+            document.getElementById("text201").style.display = "block";
+            document.getElementById("text202").style.display = "block";
+            document.getElementById("text203").style.display = "block";
+            document.getElementById("text0a").style.display = "none";
+            document.getElementById("text1a").style.display = "none";
+            document.getElementById("text2a").style.display = "none";
+            document.getElementById("text3a").style.display = "none";
+            document.getElementById("text4a").style.display = "none";
+            document.getElementById("text5a").style.display = "none";
+        }
+    }
+    function initialState2corrb() {
+        var check = document.getElementById("lockBox").checked;
+        var sliderState2 = document.getElementById("myRange2").value;
+        if (divState == 0 && check == true) {
+            document.getElementById("text201").style.display = "none";
+            document.getElementById("text202").style.display = "none";
+            document.getElementById("text203").style.display = "none";
+            document.getElementById("text0b").style.display = "none";
+            document.getElementById("text1b").style.display = "none";
+            document.getElementById("text2b").style.display = "none";
+            document.getElementById("text3b").style.display = "none";
+            document.getElementById("text4b").style.display = "none";
+            document.getElementById("text5b").style.display = "none";
+        }
+        if (divState == 1 && check == false) {
+            document.getElementById("text201").style.display = "none";
+            document.getElementById("text202").style.display = "none";
+            document.getElementById("text203").style.display = "none";
+            document.getElementById("text0a").style.display = "none";
+            document.getElementById("text1b").style.display = "none";
+            document.getElementById("text2b").style.display = "none";
+            document.getElementById("text3b").style.display = "none";
+            document.getElementById("text4b").style.display = "none";
+            document.getElementById("text5b").style.display = "none";
+        }
+        if (divState == 1 && check == false && sliderState2 == 0) {
+            document.getElementById("text0a").style.display = "block";
+        }
+    }
+    function initialState2a() {
         document.getElementById("heatmapCombinedInit").style.display = "none";
         document.getElementById("heatmapCombined1").style.display = "none";
         document.getElementById("heatmapCombined2").style.display = "none";
         document.getElementById("heatmapCombined3").style.display = "none";
         document.getElementById("heatmapCombined4").style.display = "none";
-        document.getElementById("heatmapCombined5").style.display = "none"; 
+        document.getElementById("heatmapCombined5").style.display = "none";    
     }
     function initialState3() {
         document.getElementById("text301").style.display = "none";
@@ -68,16 +130,17 @@
     
     function sliderStore(temp) {
         var tmp1, tmp2, tmp3;
+        var check = document.getElementById("lockBox").checked;
+        var sliderState1 = document.getElementById("myRange1").value;
+        var sliderState2 = document.getElementById("myRange2").value;
+        var sliderState3 = document.getElementById("myRange2a").value;
+        
         if (initTmp == 0) {
             tmp1 = temp;
             tmp2 = temp;
             tmp3 = temp;
             initTmp = 1;
         }
-        var sliderState1 = document.getElementById("myRange1").value;
-        var sliderState2 = document.getElementById("myRange2").value;
-        var sliderState3 = document.getElementById("myRange3").value;
-        
         // Slider 1
         switch (true) {
             case ((sliderState1 == 0) || (tmp1 == 0)):
@@ -128,7 +191,7 @@
         // Slider 2
         switch (true) {
             case ((sliderState2 == 0) || (tmp2 == 0)):
-                initialState2();
+                initialState2();initialState2a();
                 tmp2 = 1;
                 document.getElementById("text201").style.display = "block";
                 document.getElementById("text202").style.display = "block";
@@ -137,51 +200,102 @@
                 document.getElementById("heatmapContainerInitc").style.opacity = "1";
                 document.getElementById("heatmapCombinedInit").style.display = "block";
                 document.getElementById("heatmapCombinedInit").style.opacity = "0.5";
+                initialState2corrb();initialState2corra();
                 break;
             case (sliderState2 == 1):
-                initialState2();
-                //document.getElementById("text1c").style.display = "block";
+                initialState2();initialState2a();
+                document.getElementById("text1a").style.display = "block";
+                document.getElementById("text1b").style.display = "block";
                 document.getElementById("heatmapContainer1c").style.display = "block";
                 document.getElementById("heatmapContainer1c").style.opacity = "1";
                 document.getElementById("heatmapCombined1").style.display = "block";
                 document.getElementById("heatmapCombined1").style.opacity = "0.5";
+                initialState2corrb();initialState2corra();
                 break;
             case (sliderState2 == 2):
-                initialState2();
-                //document.getElementById("text2c").style.display = "block";
+                initialState2();initialState2a();
+                document.getElementById("text2a").style.display = "block";
+                document.getElementById("text2b").style.display = "block";
                 document.getElementById("heatmapContainer2c").style.display = "block";
                 document.getElementById("heatmapContainer2c").style.opacity = "1";
                 document.getElementById("heatmapCombined2").style.display = "block";
                 document.getElementById("heatmapCombined2").style.opacity = "0.5";
+                initialState2corrb();initialState2corra();
                 break;
             case (sliderState2 == 3):
-                initialState2();
-                //document.getElementById("text3c").style.display = "block";
+                initialState2();initialState2a();
+                document.getElementById("text3a").style.display = "block";
+                document.getElementById("text3b").style.display = "block";
                 document.getElementById("heatmapContainer3c").style.display = "block";
                 document.getElementById("heatmapContainer3c").style.opacity = "1";
                 document.getElementById("heatmapCombined3").style.display = "block";
                 document.getElementById("heatmapCombined3").style.opacity = "0.5";
+                initialState2corrb();initialState2corra();
                 break;
             case (sliderState2 == 4):
-                initialState2();
-                //document.getElementById("text4c").style.display = "block";
+                initialState2();initialState2a();
+                document.getElementById("text4a").style.display = "block";
+                document.getElementById("text4b").style.display = "block";
                 document.getElementById("heatmapContainer4c").style.display = "block";
                 document.getElementById("heatmapContainer4c").style.opacity = "1";
                 document.getElementById("heatmapContainer4Coverc").style.display = "block";
                 document.getElementById("heatmapContainer4Coverc").style.opacity = "1";
                 document.getElementById("heatmapCombined4").style.display = "block";
                 document.getElementById("heatmapCombined4").style.opacity = "0.5";
+                initialState2corrb();initialState2corra();
                 break;
             case (sliderState2 == 5):
-                initialState2();
-                //document.getElementById("text5c").style.display = "block";
+                initialState2();initialState2a();
+                document.getElementById("text5a").style.display = "block";
+                document.getElementById("text5b").style.display = "block";
                 document.getElementById("heatmapContainer5c").style.display = "block";
                 document.getElementById("heatmapContainer5c").style.opacity = "1";
                 document.getElementById("heatmapContainer4Coverc").style.display = "block";
                 document.getElementById("heatmapContainer4Coverc").style.opacity = "1";
                 document.getElementById("heatmapCombined5").style.display = "block";
                 document.getElementById("heatmapCombined5").style.opacity = "0.5";
+                initialState2corrb();initialState2corra();
                 break;
+        }
+        if (check == false) {
+            switch (true) {
+                case (sliderState3 == 0):
+                    initialState2a();initialState2corrb();
+                    document.getElementById("text0b").style.display = "block";
+                    document.getElementById("heatmapCombinedInit").style.display = "block";
+                    document.getElementById("heatmapCombinedInit").style.opacity = "0.5";
+                    break;
+                case (sliderState3 == 1):
+                    initialState2a();initialState2corrb();
+                    document.getElementById("text1b").style.display = "block";
+                    document.getElementById("heatmapCombined1").style.display = "block";
+                    document.getElementById("heatmapCombined1").style.opacity = "0.5";
+                    break;
+                case (sliderState3 == 2):
+                    initialState2a();initialState2corrb();
+                    document.getElementById("text2b").style.display = "block";
+                    document.getElementById("heatmapCombined2").style.display = "block";
+                    document.getElementById("heatmapCombined2").style.opacity = "0.5";
+                    break;
+                case (sliderState3 == 3):
+                    initialState2a();initialState2corrb();
+                    document.getElementById("text3b").style.display = "block";
+                    document.getElementById("heatmapCombined3").style.display = "block";
+                    document.getElementById("heatmapCombined3").style.opacity = "0.5";
+                    break;
+                case (sliderState3 == 4):
+                    initialState2a();initialState2corrb();
+                    document.getElementById("text4b").style.display = "block";
+                    document.getElementById("heatmapCombined4").style.display = "block";
+                    document.getElementById("heatmapCombined4").style.opacity = "0.5";
+                    break;
+                case (sliderState3 == 5):
+                    initialState2a();initialState2corrb();
+                    document.getElementById("text5b").style.display = "block";
+                    document.getElementById("heatmapCombined5").style.display = "block";
+                    document.getElementById("heatmapCombined5").style.opacity = "0.5";
+                    break;
+            }
         }
         
         // Slider 3
@@ -264,16 +378,54 @@
     }
     
     function hideShow() {
+        var check = document.getElementById("lockBox").checked;
+        document.getElementById("myRange2").value = 0;
+        document.getElementById("myRange2a").value = 0;
+        if ((divState == 1) && (check == false)) {
+            document.getElementById("heatmapContainerWrapper2a").style.display = "block";
+            divState = 1;
+            return;
+        }
         if (divState == 0) {
-            document.getElementById("heatmapContainerWrapper2").style.display = "block";
+            document.getElementById("heatmapContainerWrapper2a").style.display = "block";
             divState = 1;
             return;
         }
         else if (divState == 1) {
-            document.getElementById("heatmapContainerWrapper2").style.display = "none";
+            document.getElementById("heatmapContainerWrapper2a").style.display = "none";
             divState = 0;
             return;
         } 
+    }
+    
+    function lock() {
+        var check = document.getElementById("lockBox").checked;
+        if (check == true) {
+            initialState2();
+            document.getElementById("myRange2").value = 0;
+            document.getElementById("heatmapContainerInitc").style.display = "block";
+            document.getElementById("sliderText2").style.color = "#F22121";
+            document.getElementById("myRange2a").style.display = "none";
+            document.getElementById("sliderNumbers2").style.display = "none";
+            document.getElementById("text201").style.display = "block";
+            document.getElementById("text202").style.display = "block";
+            document.getElementById("text203").style.display = "block";
+        }
+        else if (check == false) {
+            initialState2();
+            document.getElementById("myRange2").value = 0;
+            document.getElementById("heatmapContainerInitc").style.display = "block";
+            document.getElementById("myRange2a").value = 0;
+            document.getElementById("sliderText2").style.color = "#44ED47";
+            document.getElementById("myRange2a").style.display = "block";
+            document.getElementById("sliderNumbers2").style.display = "block";
+            document.getElementById("text201").style.display = "none";
+            document.getElementById("text202").style.display = "none";
+            document.getElementById("text203").style.display = "none";
+            document.getElementById("text0a").style.display = "block";
+            document.getElementById("text0b").style.display = "block";
+        }
+        hideShow();
     }
     
     function handleFiles(files) {

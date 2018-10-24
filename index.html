@@ -68,8 +68,9 @@
                 </div>
                 <div class="slidecontainer">
                     <input type="range" min="0" max="5" value="0" class="slider1" id="myRange1" oninput="sliderStore();">
-                    <p id="sliderText">Choose a game time on Slider (mins): </p>
-                    <p id="sliderNumbers">0&nbsp&nbsp&nbsp&nbsp&nbsp 4&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 8&nbsp&nbsp&nbsp&nbsp&nbsp 12&nbsp&nbsp&nbsp&nbsp 14&nbsp&nbsp&nbsp&nbsp 16&nbsp&nbsp&nbsp&nbsp</p>
+                    <p id="sliderText1">Choose a game time on Slider (mins): </p>
+                    <p id="sliderNumbers1">0&nbsp&nbsp&nbsp&nbsp&nbsp 4&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 8&nbsp&nbsp&nbsp&nbsp&nbsp
+                                          12&nbsp&nbsp&nbsp&nbsp 14&nbsp&nbsp&nbsp&nbsp 16&nbsp&nbsp&nbsp&nbsp</p>
                 </div>
                 <div class="caption">
                     <span id="visOneHeader" class="border">FIRST VISUALISATION</span>
@@ -112,7 +113,7 @@
                     <label id="label2" for="csvFileInput2">CLICK TO SHOW/HIDE HEATMAP 2</label>
                     <input type="button" id="csvFileInput2" name="csvFileInput2" class="button2" onclick="hideShow();">
                 </div>
-                <div id="heatmapContainerWrapper">
+                <div id="heatmapContainerWrapper2">
                     <div id="heatmapContainerInitc"></div>
                     <div id="heatmapContainer1c"></div>
                     <div id="heatmapContainer2c"></div>
@@ -123,10 +124,19 @@
                 </div>
                 <div class="slidecontainer">
                     <input type="range" min="0" max="5" value="0" class="slider2" id="myRange2" oninput="sliderStore();">
-                    <p id="sliderText">Choose a game time on Slider (mins): </p>
-                    <p id="sliderNumbers">0&nbsp&nbsp&nbsp&nbsp&nbsp 4&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 8&nbsp&nbsp&nbsp&nbsp&nbsp 12&nbsp&nbsp&nbsp&nbsp 14&nbsp&nbsp&nbsp&nbsp 16&nbsp&nbsp&nbsp&nbsp</p>
+                    <input type="range" min="0" max="5" value="0" class="slider2" id="myRange2a" oninput="sliderStore();">
+                    <p id="sliderText1">Choose a game time on Slider (mins): </p>
+                    <p id="sliderNumbers1">0&nbsp&nbsp&nbsp&nbsp&nbsp 4&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 8&nbsp&nbsp&nbsp&nbsp&nbsp
+                                          12&nbsp&nbsp&nbsp&nbsp 14&nbsp&nbsp&nbsp&nbsp 16&nbsp&nbsp&nbsp&nbsp</p>
+                    <label class="lockBoxCont">
+                        <input type="checkbox" id="lockBox" onclick="lock();" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                    <p id="sliderText2">Lock</p>
+                    <p id="sliderNumbers2">0&nbsp&nbsp&nbsp&nbsp&nbsp 4&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 8&nbsp&nbsp&nbsp&nbsp&nbsp
+                                          12&nbsp&nbsp&nbsp&nbsp 14&nbsp&nbsp&nbsp&nbsp 16&nbsp&nbsp&nbsp&nbsp</p>
                 </div>
-                <div id="heatmapContainerWrapper2">
+                <div id="heatmapContainerWrapper2a">
                     <div id="heatmapCombinedInit"></div>
                     <div id="heatmapCombined1"></div>
                     <div id="heatmapCombined2"></div>
@@ -141,7 +151,19 @@
                 <div id="textHeader2">at Time Limit</div>
                 <div id="text201">SHOW OR</div>
                 <div id="text202">HIDE</div>
-                <div id="text203">COMBINED</div>
+                <div id="text203">HEATMAP 2</div>
+                <div id="text0a">--</div>
+                <div id="text1a">60</div>
+                <div id="text2a">17</div>
+                <div id="text3a">07</div>
+                <div id="text4a">15</div>
+                <div id="text5a">01</div>
+                <div id="text0b">--</div> <!-- EDIT FOR NEW MAPS IMPORTED ******************************** -->
+                <div id="text1b">55</div> 
+                <div id="text2b">12</div>
+                <div id="text3b">02</div>
+                <div id="text4b">19</div>
+                <div id="text5b">01</div>
             </div>
             <section id="scrollTagUp" class="scrollingTagAnimation">
                 <a href="#visOne"><span></span></a>
@@ -180,7 +202,7 @@
                 </div>
                 <div class="slidecontainer">
                     <input type="range" min="0" max="3" value="0" class="slider3" id="myRange3" oninput="sliderStore();">
-                    <p id="sliderText">Choose a game tag: </p>
+                    <p id="sliderText1">Choose a game tag: </p>
                     <p id="sliderTags">&nbspMap&nbsp&nbsp&nbsp&nbsp&nbsp MatchID&nbsp TimeEnd&nbsp&nbsp&nbsp Winner</p>
                 </div>
                 <div class="caption">
@@ -188,9 +210,9 @@
                 </div>
                 <div id="textHeader1">Game-Statistics</div>
                 <div id="textHeader2">Match &nbsp&nbspTags</div>
-                <div id="text3000">SELECT:</div>
-                <div id="text3001">A</div>
-                <div id="text3002">GAME TAG</div>
+                <div id="text3000">SELECT</div>
+                <div id="text3001">&</div>
+                <div id="text3002">UPLOAD</div>
                 <div id="text301">Map:</div>
                 <div id="text302"><p id="map"></div>
                 <div id="text311">matchID:</div>

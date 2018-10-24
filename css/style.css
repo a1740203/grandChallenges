@@ -138,7 +138,7 @@
         margin-left: 50px;
         margin-top: 0vh;
     }
-    #heatmapContainerWrapper, #heatmapContainerWrapper2, #heatmapContainerWrapper3 {
+    #heatmapContainerWrapper, #heatmapContainerWrapper2, #heatmapContainerWrapper2a, #heatmapContainerWrapper3 {
         position: absolute;
         width: 530px;
         height: 510px;
@@ -148,8 +148,9 @@
         border: 10px solid #05113d;
         border-style: outset;
         z-index: 4;
+        opacity: 1;
     }
-    #heatmapContainerWrapper2 {
+    #heatmapContainerWrapper2a {
         opacity: 0.9;
     }
     #heatmapContainerWrapper3 {
@@ -238,7 +239,10 @@
     #heatmapUpload4 {
         background-image: url("../images/vicMapPhotos/nmap1.png");
     }
-    #textHeader1, #textHeader2, #text0, #text1, #text2, #text3, #text4, #text5, #csvFileInput2, #csvFileInput3, #visOneHeader {
+    #textHeader1, #textHeader2, #text0, #csvFileInput2, #csvFileInput3, #visOneHeader,
+    #text1, #text2, #text3, #text4, #text5,
+    #text0a, #text1a, #text2a, #text3a, #text4a, #text5a,
+    #text0b, #text1b, #text2b, #text3b, #textb4, #text5b {
         z-index: 3;
     }
     /* Avg Texts */
@@ -258,7 +262,9 @@
         font-size: 47px;
     }
     /* Elimination Texts */
-    #text1, #text2, #text3, #text4, #text5 {
+    #text1, #text2, #text3, #text4, #text5,
+    #text0a, #text1a, #text2a, #text3a, #text4a, #text5a,
+    #text0b, #text1b, #text2b, #text3b, #text4b, #text5b {
         position: absolute;
         margin-left: 1vw;
         margin-top: 16vh;
@@ -266,19 +272,35 @@
         opacity: 0.8;
         text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
     }
-    #text1 {
+    #text0a, #text1a, #text2a, #text3a, #text4a, #text5a {
+        margin-left: 1vw;
+        margin-top: 25vh;
+        font-size: 170px;
+    }
+    #text0b, #text1b, #text2b, #text3b, #text4b, #text5b {
+        margin-left: 18vw;
+        margin-top: 40vh;
+        font-size: 170px;
+    }
+    #text0a {
+        margin-left: 5vw;
+    }
+    #text0b {
+        margin-left: 22vw;
+    }
+    #text1, #text1a, #text1b {
         color: #ff4440;
     }
-    #text2 {
+    #text2, #text2a, #text2b {
         color: #81ff81;
     }
-    #text3 {
+    #text3, #text3a, #text3b {
         color: #9fcbff;
     }
-    #text4 {
+    #text4, #text4a, #text4b {
         color: #82ffbc;
     }
-    #text5 {
+    #text5, #text5a, #text5b {
         color: #5241ff;
     }
     #text01, #text02, #text03, #text201, #text202, #text203, #text301, #text311, #text321, #text331, #text302, #text312, #text322, #text332, #text3000, #text3001, #text3002 {
@@ -310,7 +332,7 @@
         font-size: 80px; 
     }
     #text3002 {
-        margin-left: 120px;
+        margin-left: 150px;
         margin-top: 365px;
         font-size: 40px; 
     }
@@ -455,7 +477,7 @@
         color: #0080ff;
     }
     /* Slider Selection */
-    #sliderNumbers {
+    #sliderNumbers1, #sliderNumbers2 {
         position: absolute;
         margin-left: 525px;
         margin-top: 51px;
@@ -464,6 +486,9 @@
         font-size: 20px;
         letter-spacing: 6px;
         text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+    }
+    #sliderNumbers2 {
+        margin-top: 101px;
     }
     #sliderTags {
         position: absolute;
@@ -474,15 +499,86 @@
         letter-spacing: 6px;
         text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
     }
-    #sliderText {
+    #sliderText1, #sliderText2, .lockBoxCont {
         position: absolute;
         margin-left: 517px;
-        margin-top: 15px;
+        margin-top: 19px;
         text-transform: uppercase;
         z-index: 5;
         font-size: 16px;
         letter-spacing: 2px;
         text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+    }
+    #sliderText2 {
+        color: #F22121;
+        margin-top: 17px;
+        margin-left: 920px;
+        font-size: 20px;
+    }
+    /* Check Box */
+    .lockBoxCont {
+        margin-top: 17px;
+        margin-left: 988px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        opacity: 0.85;
+    }
+
+/* Hide the browser's default checkbox */
+    .lockBoxCont input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    
+    /* Create a custom checkbox */
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+    }
+    
+    /* On mouse-over, add a grey background color */
+    .lockBoxCont:hover input ~ .checkmark {
+        background-color: #cccccc;
+    }
+    
+    /* When the checkbox is checked, add a blue background */
+    .lockBoxCont input:checked ~ .checkmark {
+        background-color: #F22121;
+    }
+    
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    
+    /* Show the checkmark when checked */
+    .lockBoxCont input:checked ~ .checkmark:after {
+        display: block;
+    }
+    
+    /* Style the checkmark/indicator */
+    .lockBoxCont .checkmark:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
     }
     /* Slider Itself */
     .slider1, .slider2, .slider3 {
@@ -553,6 +649,9 @@
     }
     .slider2::-webkit-slider-thumb {
         background: #ff0000;
+    }
+    #myRange2a {
+        top: 50px;
     }
     .slider3::-webkit-slider-thumb {
         width: 105px;
