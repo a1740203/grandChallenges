@@ -133,7 +133,8 @@
         var check = document.getElementById("lockBox").checked;
         var sliderState1 = document.getElementById("myRange1").value;
         var sliderState2 = document.getElementById("myRange2").value;
-        var sliderState3 = document.getElementById("myRange2a").value;
+        var sliderState2a = document.getElementById("myRange2a").value;
+        var sliderState3 = document.getElementById("myRange3").value;
         
         if (initTmp == 0) {
             tmp1 = temp;
@@ -259,37 +260,37 @@
         }
         if (check == false) {
             switch (true) {
-                case (sliderState3 == 0):
+                case (sliderState2a == 0):
                     initialState2a();initialState2corrb();
                     document.getElementById("text0b").style.display = "block";
                     document.getElementById("heatmapCombinedInit").style.display = "block";
                     document.getElementById("heatmapCombinedInit").style.opacity = "0.5";
                     break;
-                case (sliderState3 == 1):
+                case (sliderState2a == 1):
                     initialState2a();initialState2corrb();
                     document.getElementById("text1b").style.display = "block";
                     document.getElementById("heatmapCombined1").style.display = "block";
                     document.getElementById("heatmapCombined1").style.opacity = "0.5";
                     break;
-                case (sliderState3 == 2):
+                case (sliderState2a == 2):
                     initialState2a();initialState2corrb();
                     document.getElementById("text2b").style.display = "block";
                     document.getElementById("heatmapCombined2").style.display = "block";
                     document.getElementById("heatmapCombined2").style.opacity = "0.5";
                     break;
-                case (sliderState3 == 3):
+                case (sliderState2a == 3):
                     initialState2a();initialState2corrb();
                     document.getElementById("text3b").style.display = "block";
                     document.getElementById("heatmapCombined3").style.display = "block";
                     document.getElementById("heatmapCombined3").style.opacity = "0.5";
                     break;
-                case (sliderState3 == 4):
+                case (sliderState2a == 4):
                     initialState2a();initialState2corrb();
                     document.getElementById("text4b").style.display = "block";
                     document.getElementById("heatmapCombined4").style.display = "block";
                     document.getElementById("heatmapCombined4").style.opacity = "0.5";
                     break;
-                case (sliderState3 == 5):
+                case (sliderState2a == 5):
                     initialState2a();initialState2corrb();
                     document.getElementById("text5b").style.display = "block";
                     document.getElementById("heatmapCombined5").style.display = "block";
